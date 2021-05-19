@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Villager from './Villager';
+import { Link } from 'react-router-dom';
 
 const VillagerList = ({ villagers }) => (
   //aria-labels attaches a label to anonymous HTML elements  
   <ul aria-label='villagers'>
     {
       villagers.map((villager) => (
+        <Link to={`${`/${villager.id}`}`} key={`${villager.id}`}>
         <li key={villager.id}>
           <Villager 
             name={villager.name}
@@ -14,6 +16,7 @@ const VillagerList = ({ villagers }) => (
             image={villager.image}
           />
         </li>
+        </Link>
       ))
     }
   </ul>

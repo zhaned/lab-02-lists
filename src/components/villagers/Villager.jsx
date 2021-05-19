@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Villager = ({ name, quote, image }) => (
+const Villager = ({name, quote, image}) => (
   <>
-    <img 
-      src={image} 
-      alt={name} 
+    <img
+      src={image}
+      alt={name}
       style={{
         height: '150px'
-      }}/>
+    }}/>
     <p>{name}</p>
     <p>{quote}</p>
   </>

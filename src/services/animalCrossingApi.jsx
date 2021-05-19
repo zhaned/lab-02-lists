@@ -13,6 +13,7 @@ const findVillagers = async () => {
 };
 
 const findVillager = async (id) => {
+  if(!id) id = '5f5fb4bbbfd05c2aed82e460';
   const response = await fetch(`https://ac-vill.herokuapp.com/villagers/${id}`);
   const results = await response.json();
   const array = [];
