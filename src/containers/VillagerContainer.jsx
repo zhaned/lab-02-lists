@@ -10,7 +10,7 @@ export default class VillagerContainer extends Component {
   }
 
   async componentDidMount() {
-    const villager = await findVillager(this.props.match.params.id);
+    const villager = await findVillager(this.props.match.params.id || '5f5fb4bbbfd05c2aed82e460');
     this.setState({
       villager,
       loading: false
